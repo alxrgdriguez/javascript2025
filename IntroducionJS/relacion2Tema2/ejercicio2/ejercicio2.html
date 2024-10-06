@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Letra del DNI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+        }
+
+        input,
+        button {
+            padding: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Calculadora de Letra del DNI</h1>
+    <label for="dni">Introduce el número del DNI (8 dígitos):</label>
+    <input type="numero" id="dni" required>
+    <button onclick=" calcularLetra()">Calcular Letra</button>
+
+    <h2 id="resultado"></h2>
+
+    <script>
+        function calcularLetra() {
+            const numeroIntroducido = document.getElementById('dni').value;
+            const numDNI = parseInt(numeroIntroducido);
+
+            if (isNaN(numDNI) || numDNI < 10000000 || numDNI > 99999999) {
+                alert('Por favor, introduce un numero de DNI valido (8 digitos).');
+                return;
+            }
+
+            const letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'];
+            const letraCorrespondiente = letras[numDNI % 23];
+
+            document.getElementById('resultado').innerText = `La letra correspondiente al DNI ${numDNI} es: ${letraCorrespondiente}`;
+        }
+    </script>
+
+</body>
+
+</html>
