@@ -7,37 +7,37 @@ function diaSemana(numero) {
 
         case 0:
 
-            alert("Hoy es Domingo");
+            alert("Hoy es Dom");
             break;
 
         case 1:
 
-            alert("Hoy es Lunes");
+            alert("Hoy es Lun");
             break;
 
         case 2:
 
-            alert("Hoy es Martes");
+            alert("Hoy es Mar");
             break;
 
         case 3:
 
-            alert("Hoy es Miercoles");
+            alert("Hoy es Mie");
             break;
 
         case 4:
 
-            alert("Hoy es Jueves");
+            alert("Hoy es Jue");
             break;
 
         case 5:
 
-            alert("Hoy es Viernes");
+            alert("Hoy es Vie");
             break;
 
         case 6:
 
-            alert("Hoy es Sabado");
+            alert("Hoy es Sab");
             break;
 
         default:
@@ -46,10 +46,8 @@ function diaSemana(numero) {
 
     }
 
-
-
 }
 
-const day = new Date().getDay();
 
+const day = new Date().getDay();
 diaSemana(day);
