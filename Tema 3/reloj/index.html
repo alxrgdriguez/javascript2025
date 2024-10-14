@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reloj</title>
+</head>
+
+<style>
+    h1 {
+        background-color: black;
+        max-width: min-content;
+        color: white;
+        font-size: 300px;
+        border-radius: 10px;
+        margin: 0 auto;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        padding: 10px;
+    }
+</style>
+
+<script>
+
+    function reloj() {
+
+        let hora = new Date().getHours();
+        if (hora < 10) {
+            hora = `0${hora}`;
+
+
+        }
+        let minutos = new Date().getMinutes();
+        if (minutos < 10) {
+            minutos = `0${minutos}`;
+
+        }
+
+        let segundos = new Date().getSeconds();
+        if (segundos < 10) {
+            segundos = `0${segundos}`;
+        }
+
+        const horaReloj = document.getElementById("hora");
+        horaReloj.innerText = `${hora}:${minutos}:${segundos}`
+
+        console.log(horaReloj)
+
+    }
+
+    setInterval(reloj, 1000);
+
+
+
+</script>
+
+
+<body onload="reloj()">
+
+    <h1 id="hora"></h1>
+
+</body>
+
+</html>

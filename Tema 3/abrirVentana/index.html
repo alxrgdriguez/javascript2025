@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abrir Ventana</title>
+</head>
+
+<body onchange="">
+
+    <form action="">
+
+        <label for="">Introduce tu nombre</label>
+        <input type="text" name="nombre" id="nombre">
+
+        <label for="">¿Deseas cambiar el fondo de la ventana?</label>
+        <input type="color" name="color" id="color" onchange="cambiarColor()">
+        <input type="button" value="Abrir Ventana" onclick="abrirVentana()">
+
+
+
+    </form>
+
+    <script>
+
+        function abrirVentana() {
+
+            ventana = window.open("", "miventana", "width= 500", "height=500");
+            ventana.document.write(`<h1>Hola ${document.getElementById("nombre").value} bienvenido a mi Web </h1>`);
+            ventana.document.write(
+                `<label for="">¿Deseas cambiar el fondo de la ventana?</label>
+                <input type="color" name="color2" id="color2" onchange="document.body.style.backgroundColor = document.getElementById('color2').value">`
+            );
+            ventana.document.bgColor = document.getElementById("color").value;
+
+        }
+
+        function cambiarColor() {
+            document.bgColor = document.getElementById("color").value;
+
+        }
+
+        let ventana = "";
+
+    </script>
+
+</body>
+
+</html>
