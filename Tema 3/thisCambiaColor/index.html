@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This cambia color</title>
+</head>
+
+<style>
+    body {
+        display: flex;
+        gap: 30px;
+        margin: 180px;
+        justify-content: center;
+
+    }
+
+    div {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+
+
+    }
+</style>
+
+
+<body>
+
+    <div id="red" style="background-color: red" onmouseover="cambioColor(this)"></div>
+    <div id="yellow" style="background-color: yellow" onmouseover="cambioColor(this)"></div>
+    <div id="blue" style="background-color: blue" onmouseover="cambioColor(this)"></div>
+    <div id="green" style="background-color: green" onmouseover="cambioColor(this)"></div>
+
+    <script>
+
+        function cambioColor(elemento) {
+
+            document.bgColor = elemento.id;
+            elemento.style.backgroundImage = "url(gafas.jpg)";
+        }
+    </script>
+
+</body>
+
+</html>

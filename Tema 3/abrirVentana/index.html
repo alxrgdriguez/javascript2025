@@ -9,6 +9,7 @@
 
 <body onchange="">
 
+
     <form action="">
 
         <label for="">Introduce tu nombre</label>
@@ -17,6 +18,7 @@
         <label for="">¿Deseas cambiar el fondo de la ventana?</label>
         <input type="color" name="color" id="color" onchange="cambiarColor()">
         <input type="button" value="Abrir Ventana" onclick="abrirVentana()">
+        <input type="button" value="Cerrar Ventana" onclick="cerrarVentana()">
 
 
 
@@ -41,7 +43,12 @@
 
         }
 
+        function cerrarVentana() {
+            ventana.window.close();
+        }
+
         let ventana = "";
+
 
     </script>
 
