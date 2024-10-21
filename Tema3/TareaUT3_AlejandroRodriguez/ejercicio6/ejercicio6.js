@@ -1,12 +1,13 @@
 
 // Guardamos cada campo con su id correspondiente
 const formulario = document.getElementById("formulario");
-const nombre = document.getElementById("nombre").value;
-const edad = parseInt(document.getElementById("edad").value);
-const aficiones = document.getElementById("aficiones").value;
 
 formulario.addEventListener("submit", function (evento) {
     evento.preventDefault(); // Para cuando le de al boton no se envie el formulario y compruebe todo antes de enviarlo
+
+    const nombre = document.getElementById("nombre").value;
+    const edad = parseInt(document.getElementById("edad").value);
+    const aficiones = document.getElementById("aficiones").value;
 
     // Hacer comprobaciones para cada uno
 
