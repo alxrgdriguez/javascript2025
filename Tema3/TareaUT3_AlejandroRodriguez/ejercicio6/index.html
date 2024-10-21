@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea UT3 - Ejercicio 6</title>
+</head>
+
+<style>
+    form {
+        margin: 0 auto;
+        margin-top: 100px;
+        max-width: 30%;
+        padding: 30px;
+        background-color: antiquewhite;
+        border-radius: 6px;
+        box-shadow: 1px 1px 1px 10px black;
+        font-size: 18px;
+        font-weight: bold;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    form label,
+    input,
+    select {
+        height: 24px;
+        font-size: 18px;
+    }
+
+    form input {
+        border: 1px solid black;
+        border-radius: 3px;
+    }
+
+    h2 {
+        text-align: center;
+        text-decoration: underline;
+    }
+
+    #boton {
+        margin-top: 20px;
+        max-width: 52%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 30px;
+    }
+
+    form #nombre {
+        max-width: 52%;
+    }
+
+    form #edad {
+        max-width: 52%;
+    }
+
+    form #aficiones {
+        max-width: 52%;
+    }
+
+    form input,
+    label {}
+</style>
+
+<body>
+
+    <h1>Ejercicio 6</h1>
+    <h3>Validar los datos introducidos en el formulario y pasarlos a otra ventana: <br>
+        ● El nombre que no esté vacío, si está vacío que te muestre un mensaje que te diga que
+        tienes que rellenarlo.<br>
+        ● La edad que sea mayor de 18 años, si no es que te muestre un mensaje.<br>
+        ● Su afición también seleccionada, si está vacío que te muestre otro mensaje.<br>
+        ● Una vez que todo está ok pasar los datos a otra ventana de 500 X500 cuyo título de la
+        ventana será Validación de formulario,<br> y luego una cabecera con los datos que hemos
+        pasado de tamaño H1 que nos diga por ejemplo: y además input color para poder cambiar
+        el color de la nueva ventana.<br></h3>
+
+    <form method="GET" id="formulario">
+        <h2>Formulario a rellenar</h2>
+        <label for="nombre">Nombre </label>
+        <input type="text" id="nombre" placeholder="Introduza su nombre" required>
+        <label for="edad">Edad </label>
+        <input type="number" id="edad" min="18" max="120" placeholder="Edad">
+        <label for="aficiones">Aficiones</label>
+        <select name="selec_aficiones" id="aficiones">
+            <option value="">Elige uno</option>
+            <option id="informatica" value="informatica">Informatica</option>
+            <option id="deportes" value="deportes">Deportes</option>
+            <option id="musica" value="musica">Musica</option>
+        </select>
+
+        <input type="submit" id="boton" value="Enviar formulario">
+
+    </form>
+
+    <script src="ejercicio6.js"></script>
+
+</body>
+
+</html>
