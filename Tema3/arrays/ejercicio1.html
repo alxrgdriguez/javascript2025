@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+</head>
+
+<body>
+    <!--Créame un array con diferentes países-->
+    <script>
+        let paises = ["Brasil", "Argentina", "Chile", "Uruguay", "Colombia", "Peru", "México", "Venezuela", "Ecuador",
+            "Bolivia", "Paraguay", "El Salvador", "Honduras", "Nicaragua", "Costa Rica", "Guatemala", "Cuba", "Haití",
+            "República Dominicana", "República del Ecuador", "Uruguay", "España"];
+        //Mostrar el número de elementos del array
+        document.write("Elementos de un array: " + paises.length);
+        document.write("<br>");
+        document.write("--------------------------------");
+        document.write("<br>");
+        //Mostrar todos los elementos del array.
+        document.write("Elementos del array: " + paises);
+        document.write("<br>");
+        document.write("--------------------------------");
+        document.write("<br>");
+        //Muestra los elementos del array en sentido inverso.
+        document.write("Elementos del array en sentido inverso: " + paises.reverse());
+        document.write("<br>");
+        document.write("--------------------------------");
+        document.write("<br>");
+        //Muestra los elementos del array ordenados alfabéticamente (pero no los ordena).
+        document.write("Elementos del array ordenados alfabéticamente: " + paises.sort());
+        document.write("<br>");
+        document.write("--------------------------------");
+        document.write("<br>");
+        //Añadir un elemento al principio del array.
+        paises.unshift("Canadá");
+        document.write("Elementos del array con un elemento añadido al principio: " + paises);
+        document.write("<br>");
+        document.write("--------------------------------");
+        document.write("<br>");
+        // Añadir un elemento al final del array.
+        paises.push("Australia");
+        document.write("Elementos del array con un elemento añadido al final: " + paises);
+        document.write("<br>");
+        document.write("--------------------------------");
+        document.write("<br>");
+        //Borrar un elemento al principio del array (y decir cuál se ha borrado).
+        let borrado = paises.shift();
+        document.write("Elementos del array con un elemento borrado al principio: " + paises);
+        document.write("<br>");
+        document.write("El elemento borrado: " + borrado);
+        document.write("<br>");
+        document.write("--------------------------------");
+        document.write("<br>");
+        //Borrar un elemento al final del array (y decir cuál se ha borrado).
+        borrado = paises.pop();
+        document.write("Elementos del array con un elemento borrado al final: " + paises);
+        document.write("<br>");
+        document.write("El elemento borrado: " + borrado);
+        document.write("<br>");
+        document.write("--------------------------------");
+        document.write("<br>");
+        //Muestra el elemento que se encuentra en una posición que el usuario indica.
+        let posicion = prompt("Indique la posición del elemento que desea ver: ");
+        document.write("Elemento en la posición " + posicion + ": " + paises[posicion]);
+        document.write("<br>");
+        document.write("--------------------------------");
+        document.write("<br>");
+        //Muestra la posición en la que se encuentra un elemento que le indica el usuario.
+        let posicion2 = prompt("Indique el elemento que desea saber la posición: ");
+        document.write("Posición del elemento " + posicion2 + ": " + paises.indexOf(posicion2));
+        document.write("<br>");
+        document.write("--------------------------------");
+        document.write("<br>");
+        //Muestra los elementos que se encuentran en un intervalo que el usuario indica.
+        let num1 = prompt("Indique el primer elemento del intervalo: ");
+        let num2 = prompt("Indique el segundo elemento del intervalo: ");
+        document.write("Elementos del intervalo " + num1 + " a " + num2 + ": " + paises.slice(num1, num2));
+
+    </script>
+</body>
+
+</html>

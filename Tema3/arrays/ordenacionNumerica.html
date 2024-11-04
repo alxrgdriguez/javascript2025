@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordenar un Array numérico</title>
+</head>
+
+<body>
+    <script>
+        let numeros = [5, 2, 8, 1, 10];
+        function mayoraMenor(a, b) {
+            return a - b;
+        }
+        function menoraMayor(a, b) {
+            return b - a;
+        }
+        document.write(numeros.sort(mayoraMenor)[0]);
+        document.write("<br>");
+        document.write(numeros.sort(menoraMayor)[0]);
+        document.write("<br>");
+        document.write("Array ordenado de menor a mayor: " + numeros.sort(mayoraMenor));
+        document.write("<br>");
+        document.write("Array ordenado de mayor a menor: " + numeros.sort(menoraMayor));
+    </script>
+</body>
+
+</html>
