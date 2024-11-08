@@ -7,6 +7,16 @@
     <title>Relación 1 - Ejercicio 3</title>
 </head>
 
+<style>
+    body {
+        max-width: 50%;
+        margin: 0 auto;
+        gap: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+</style>
+
 <body>
 
     <h1>Relación 1 - Ejercicio 3</h1>
@@ -16,24 +26,11 @@
         palabras, nos muestre una lista de palabras en
         campos checkbox</h3>
 
-    <form action="">
-        <input type="checkbox" id="Esto" name="palabras">Esto</input><br>
+    <textarea name="" id="textarea" cols="30" rows="10"></textarea>
+    <button type="button" id="enviar">Enviar Palabras</button>
+    <button type="button" id="limpiarTextArea">Limpiar Palabras</button>
 
-        <input type="checkbox" id="es" name="palabras">es</input><br>
-
-        <input type="checkbox" id="un" name="palabras">un</input><br>
-
-        <input type="checkbox" id="texto" name="palabras">texto</input><br>
-
-        <input type="checkbox" id="de" name="palabras">de</input><br>
-
-        <input type="checkbox" id="prueba" name="palabras">prueba</input><br>
-
-        <button type="button" id="enviar">Enviar</button>
-        <button type="button" id="limpiarTextArea">Limpiar</button>
-        <textarea name="" id="textarea" cols="30" rows="10"></textarea>
-
-    </form>
+    <div id="checkbox-container"></div>
 
     <script src="ejercicio3.js"></script>
 
