@@ -8,7 +8,7 @@ enviar.addEventListener("click", () => {
     checkboxContainer.innerHTML = "";
 
     // Obtener el texto del textarea y dividirlo en palabras
-    const palabras = texarea.value.trim().split(" ");  
+    const palabras = texarea.value.trim().split(" ");
 
     // Si el textarea no está vacío
     if (palabras.length > 0 && palabras[0] !== "") {
