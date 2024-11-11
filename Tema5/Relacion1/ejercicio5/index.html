@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relación 1 - Ejercicio 5</title>
+
+    <!-- Incluir Bootstrap desde CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Estilos adicionales si es necesario -->
+    <style>
+        body {
+            background-color: #f8f9fa;
+            padding-top: 30px;
+        }
+
+        .form-container {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1,
+        h3 {
+            text-align: center;
+        }
+
+        .form-check-label {
+            margin-left: 5px;
+        }
+
+        .form-check {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="form-container mx-auto col-lg-6 col-md-8 col-sm-12">
+            <h1>Relación 1 - Ejercicio 5</h1>
+            <h3>Realiza una validación de los campos marcados con * y el usuario debe aceptar las condiciones de uso.
+            </h3>
+
+            <form action="index.html" method="post">
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre: *</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="apellido" class="form-label">Apellidos: *</label>
+                    <input type="text" class="form-control" id="apellido" name="apellido" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="contrasena" class="form-label">Contraseña: *</label>
+                    <input type="password" class="form-control" id="contrasena" name="contrasena" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="passver" class="form-label">Repetir contraseña: *</label>
+                    <input type="password" class="form-control" id="passver" name="passver" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email: *</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="dni" class="form-label">DNI: *</label>
+                    <input type="text" class="form-control" id="dni" name="dni" pattern="[0-9]{8}[A-Za-z]{1}"
+                        minlength="9" maxlength="9" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="telefono" class="form-label">Teléfono: *</label>
+                    <input type="tel" class="form-control" id="telefono" name="telefono" minlength="9" maxlength="9"
+                        required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="sexo" class="form-label">Sexo: </label>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="sexo_masculino" name="sexo" value="Masculino"
+                            required>
+                        <label class="form-check-label" for="sexo_masculino">Masculino</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="sexo_femenino" name="sexo" value="Femenino"
+                            required>
+                        <label class="form-check-label" for="sexo_femenino">Femenino</label>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="tarjeta" class="form-label">Tarjeta: *</label>
+                    <input type="file" class="form-control" id="tarjeta" name="tarjeta" required>
+                </div>
+
+                <div class="form-check mb-3">
+                    <input type="checkbox" class="form-check-input" id="acepto" name="acepto" required>
+                    <label class="form-check-label" for="acepto">Acepto los términos y condiciones</label>
+                </div>
+
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary">Aceptar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Incluir Bootstrap JS (opcional si usas algún componente dinámico de Bootstrap) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
