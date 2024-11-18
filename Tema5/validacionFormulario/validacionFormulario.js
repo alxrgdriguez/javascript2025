@@ -76,7 +76,7 @@ function comprobarEdad() {
 
 function comprobarMatricula() {
     let matricula = document.getElementById("matricula");
-    let patron = matricula.value.match(/^\d{4}\s?[A-Z]{3}$/);
+    const patron = matricula.value.match(/^\d{4}\s?[A-Z]{3}$/);
 
     if (patron.test(matricula.value)) {
         matricula.className = "";
@@ -90,3 +90,17 @@ function comprobarMatricula() {
 
 
 }
+
+function contadorIntenos() {
+    let contador = 0;
+    if (document.cookie == "") {
+        document.cookie = "contador=0";
+    }
+
+    contador = document.cookie.substring(9);
+    contador++;
+    document.cookie = "contador=" + contador;
+    alert("Has enviado el formulario " + contador + " veces");
+    return true;
+}
+
