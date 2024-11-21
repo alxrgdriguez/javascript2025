@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRIVIAL IESJAROSO</title>
+</head>
+
+<style>
+    .contendor {
+        width: 75%;
+        margin: 0 auto;
+
+    }
+
+    .trivial {
+        display: flex;
+        max-width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .trivial a {
+        text-decoration: none;
+        font-size: 28px;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: bold;
+        color: rgb(255, 255, 255);
+        background-color: blueviolet;
+        transition: 0.1s;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    .trivial a:hover {
+        text-decoration: none;
+        font-size: 28px;
+        box-shadow: 2px 2px;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: bold;
+        color: rgb(0, 0, 0);
+        background-color: rgb(255, 255, 255);
+        transition: 0.1s;
+        padding: 10px;
+        border: 2px solid blueviolet;
+        border-radius: 10px;
+    }
+
+    p,
+    ul {
+        text-align: justify;
+        font-size: 20px;
+    }
+</style>
+
+<body>
+    <div class="contendor">
+
+        <div class="trivial">
+            <h1>TRIVIAL IESJAROSO</h1>
+            <a href="./VistaTrivial.html">Jugar Trivial</a>
+        </div>
+        <hr>
+        <h3>En esta tarea vamos a realizar una pequeña aplicación donde se validan
+            formularios. Trata acerca de la creación de un sistema de gestión de preguntas
+            para un juego tipo Trivial. De ahora en adelante Travial IES Jaroso para evitar
+            problemas con la licencia. La aplicación web va a tener los siguientes
+            apartados:<br><br>
+            1. Índice a todas las demás páginas<br>
+            2. Sección de Perfil de administrador.<br>
+            3. Sección de Creación de preguntas</h3>
+
+        <p style="width: 80%;">Cada una de las secciones tendrá una sola página y un
+            archivo JavaScript. Las veremos a continuación en detalle:<br>
+            <strong>1. Índice:</strong> Un índice que con el uso de JavaScript vaya a cada una de las
+            secciones.
+            Deberá aparecer el número de visitas que se han realizado a la página.
+            Para ello utilizar una cookie.<br>
+        </p>
+
+        <p>
+            <strong>2. Sección de perfil de administrador</strong> .<br>
+            Esta sección debe disponer de los siguientes campos:
+            • Nombre. Debe verificarse que el nombre solo dispone de letras y
+            caracteres. Cuando se cambie de campo el primer carácter debe
+            cambiarse a Mayúsculas y el resto a minúsculas.<br>
+            • Apellidos: Debe verificarse que el nombre solo dispone de letras y
+            caracteres. Cuando se cambie de campo el primer carácter debe
+            cambiarse a Mayúsculas y el resto a minúsculas.<br>
+            • Contraseña. Para ser segura debe tener:<br>
+        <ul>
+            o Caracteres alfabéticos (al menos uno).<br>
+            o Al menos una mayúscula.<br>
+            o Al menos una minúscula.<br>
+            o Obligatoriamente al menos un dígito decimal.
+            o Obligatoriamente al menos uno de estos caracteres; (punto y
+            coma) , (coma) . (punto) - (guion)<br>
+            o Ningún otro carácter distinto a los anteriores.<br>
+        </ul>
+        <p>
+            • Verificación Contraseña. Sino es igual a la anterior indicarlo de alguna
+            forma.<br>
+            • Fecha de nacimiento. Deberéis aceptarla en formato dd/mm/año.<br>
+            • Una etiqueta antes de cada campo a rellenar.<br>
+            • Botón Reiniciar.<br>
+            • Botón Enviar. Al pulsar este botón muestra los datos pedidos o lo
+            errores cometidos.<br>
+        </p>
+        </p>
+
+        <p><strong>3. Crear un formulario similar al siguiente:</strong> <br>
+            • Una etiqueta que esté al lado de cada campo a rellenar.<br>
+            • Con un select desplegable donde aparecerán las categorías
+            ("Geografía", "Historia", "Espectáculos", "Ciencia y
+            Tecnología","Miscelánea", "Cultura”, ....)<br>
+            • Un campo donde se escriba el nombre de la pregunta. Debes
+            asegurarte que sólo contenga caracteres del alfabeto, espacios,
+            interrogaciones, exclamaciones, puntos, comas, puntos y comas. No se
+            pueden aceptar dígitos numéricos. Se puede empezar por carácter en
+            mayúscula. No puede comenzar con otra cosa que no sea un número.
+            Además después de cada punto debe haber un espacio.<br>
+            • Cuatro campos con el contenido de las respuestas con cuatro
+            radio button a la derecha. La respuesta correcta es la seleccionada con
+            el radio button. Al escribir en un input de tipo text debéis poner esa
+            como respuesta válida.<br>
+            • Botón Enviar. Al enviar deberéis mostrar al final la pregunta con sus
+            respuestas indicando la correcta.
+            • Botón Borrar.</p><br>
+    </div>
+
+</body>
+
+</html>

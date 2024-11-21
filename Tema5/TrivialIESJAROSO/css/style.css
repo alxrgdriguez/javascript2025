@@ -1,0 +1,189 @@
+/* Reestablecer estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f1f3f5;
+    color: #343a40;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+a {
+    text-decoration: none;
+    text-align: center;
+}
+
+h1,
+h2 {
+    font-size: 2.5rem;
+    color: #212529;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.1rem;
+    text-align: center;
+    color: #6c757d;
+    margin-bottom: 10px;
+}
+
+/* Contenedor centralizado */
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 15px 0;
+    text-align: center;
+}
+
+ul li a {
+    font-size: 1.2rem;
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+ul li a:hover {
+    color: #0056b3;
+}
+
+/* Estilos de formularios */
+form {
+    display: grid;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+label {
+    font-size: 1rem;
+    color: #495057;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+select {
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    width: 100%;
+    background-color: #f8f9fa;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+select:focus {
+    border-color: #007bff;
+    outline: none;
+    background-color: #ffffff;
+}
+
+/* Estilo para los botones */
+button {
+    padding: 12px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+}
+
+button[type="reset"] {
+    background-color: #f8f9fa;
+    color: #495057;
+    border: 1px solid #ced4da;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+button[type="reset"]:hover {
+    background-color: #e2e6ea;
+}
+
+/* Estilos para el contador de visitas */
+#contador {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #28a745;
+    margin-top: 10px;
+}
+
+/* Estilos para mensajes de error o éxito */
+#resultado {
+    font-size: 1rem;
+    color: #dc3545;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#resultado.success {
+    color: #28a745;
+}
+
+/* Estilo de los campos de respuestas */
+#formPregunta .respuestas input {
+    margin-left: 10px;
+}
+
+/* Estilos para la creación de pregunta */
+#resultadoPregunta {
+    background-color: #e9ecef;
+    border-left: 5px solid #007bff;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+#resultadoPregunta ul {
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+#resultadoPregunta ul li {
+    margin-bottom: 5px;
+}
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        width: 100%;
+    }
+
+    h1,
+    h2 {
+        font-size: 2rem;
+    }
+
+    form {
+        width: 100%;
+    }
+}

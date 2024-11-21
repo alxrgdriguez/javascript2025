@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Pregunta</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="crear_pregunta.js" defer></script>
+</head>
+
+<body>
+    <h1>Crear una nueva pregunta</h1>
+    <a href="./VistaTrivial.html">Volver al Inicio</a>
+    <form id="formPregunta">
+        <label for="categoria">Categoría:</label>
+        <select id="categoria" name="categoria">
+            <option value="Geografía">Geografía</option>
+            <option value="Historia">Historia</option>
+            <option value="Espectáculos">Espectáculos</option>
+            <option value="Ciencia y Tecnología">Ciencia y Tecnología</option>
+            <option value="Miscelánea">Miscelánea</option>
+            <option value="Cultura">Cultura</option>
+        </select><br>
+
+        <label for="pregunta">Pregunta:</label>
+        <input type="text" id="pregunta" name="pregunta" required><br>
+
+        <label for="respuesta1">Respuesta 1:</label>
+        <input type="text" id="respuesta1" name="respuesta1" required>
+        <input type="radio" name="respuesta" value="1"><br>
+
+        <label for="respuesta2">Respuesta 2:</label>
+        <input type="text" id="respuesta2" name="respuesta2" required>
+        <input type="radio" name="respuesta" value="2"><br>
+
+        <label for="respuesta3">Respuesta 3:</label>
+        <input type="text" id="respuesta3" name="respuesta3" required>
+        <input type="radio" name="respuesta" value="3"><br>
+
+        <label for="respuesta4">Respuesta 4:</label>
+        <input type="text" id="respuesta4" name="respuesta4" required>
+        <input type="radio" name="respuesta" value="4"><br>
+
+        <button type="reset">Borrar</button>
+        <button type="submit">Enviar</button>
+    </form>
+
+    <div id="resultadoPregunta"></div>
+</body>
+
+</html>
