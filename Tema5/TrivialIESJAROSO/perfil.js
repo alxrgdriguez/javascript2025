@@ -8,18 +8,15 @@ function inicio() {
 
 // Funcion para validar todos los campos
 function validarTodo(eventoPorDefecto) {
-    if ((comprobarNombre()) && (comprobarApellidos()) && (comprobarContrasena()) && (comprobarFechaNacimiento()) && confirm("Deseas enviar el formulario?")) {
+    if ((comprobarNombre()) && (comprobarApellidos()) && (comprobarContrasena()) && (comprobarFechaNacimiento()) && (verificarContrasena()) && confirm("Deseas enviar el formulario?")) {
         return true;
     } else {
         eventoPorDefecto.preventDefault();
         return false;
     }
-
 }
 
-// Funcion para comprobar el campo Nombre
-// Expresión regular para validar para que solo contenga letras y caracteres
-let letrasYCaracteres = /^[A-Za-záéíóúÁÉÍÓÚñÑ\s.,!?¿¡]*$/;
+let letrasYCaracteres = /^[a-zA-Z]+$/;;
 
 function comprobarNombre() {
     let nombre = document.getElementById("nombre");
@@ -64,28 +61,35 @@ function comprobarApellidos() {
 
 function comprobarContrasena() {
     let contrasena = document.getElementById("contrasena").value;
-    let validarContrasena = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[;,.\\-])[A-Za-z\d;,.\\-]+$/;
+
+    // Expresión regular revisada
+    let validarContrasena = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[;,.\-])[A-Za-z\d;,.\-]{8,}$/;
 
     if (validarContrasena.test(contrasena)) {
-        document.getElementById("contrasena").className = "";
+        document.getElementById("contrasena").className = ""; // Sin error
         return true;
     } else {
-        document.getElementById("contrasena").className = "error";
-        alert("La contraseña tiene que contener letras, números y caracteres especiales");
-        return false
+        document.getElementById("contrasena").className = "error"; // Marca error
+        alert("La contraseña debe tener al menos 8 caracteres, incluyendo letras mayúsculas, minúsculas, números y caracteres especiales como ;,.-");
+        return false;
     }
 }
 
+// Función para verificar las contraseñas
 function verificarContrasena() {
+    let contrasena = document.getElementById("contrasena");
     let verifContrasena = document.getElementById("verif_contrasena");
+
     verifContrasena.className = "";
 
     if (verifContrasena.value === "") {
         verifContrasena.focus();
         verifContrasena.className = "error";
-        alert("La contraseña no puede estar vacía");
+        alert("La confirmación de la contraseña no puede estar vacía");
         return false;
-    } else if (verifContrasena.value !== contrasena.value) {
+    }
+
+    if (verifContrasena.value !== contrasena.value) {
         verifContrasena.focus();
         verifContrasena.className = "error";
         alert("Las contraseñas no coinciden");
@@ -96,29 +100,22 @@ function verificarContrasena() {
     }
 }
 
-function comprobarFechaNacimiento() {
-    let fechaNacimiento = document.getElementById("fecha_nacimiento");
-    fechaNacimiento.className = "";
+function verificarDate() {
+    let fechaN = document.getElementById("fecha_nacimiento")
+    const p = $("#fecha-nac-error")
+    const patronFecha = /^\d{2}\/\d{2}\/\d{4}$/
 
-    if (fechaNacimiento.value === "") {
-        fechaNacimiento.focus();
-        fechaNacimiento.className = "error";
-        alert("La fecha de nacimiento no puede estar vacía");
-        return false;
-    } else if (!fechaNacimiento.value.match(/^\d{2}\/\d{2}\/\d{4}$/)) {
-        fechaNacimiento.focus();
-        fechaNacimiento.className = "error";
-        alert("La fecha de nacimiento debe tener el formato dd/mm/aaaa");
-        return false;
+    if (fechaN.value.trim() === "" || !patronFecha.test(fechaN.value.trim())) {
+        p.innerText = "La fecha tiene que tener el formato dd/mm/aaaa"
+        fechaN.className = "error"
+        return false
     } else {
-        fechaNacimiento.className = "";
-        return true;
+        fechaN.className = ""
+        return true
     }
+
 }
 
-
-
-// Función para convertir la primera letra a mayúscula y el resto a minúsculas
 function mayusculasRestoMinsculas() {
     let texto = this.value;
     this.value = texto.charAt(0).toUpperCase() + texto.slice(1).toLowerCase();
