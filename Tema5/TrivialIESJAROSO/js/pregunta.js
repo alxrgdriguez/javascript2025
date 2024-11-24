@@ -33,30 +33,6 @@ function validarTodo(eventoPorDefecto) {
     return true;
 }
 
-// Función para mostrar los resultados
-function mostrarResultado() {
-
-    let categoria = document.getElementById("categoria").value;
-    let pregunta = document.getElementById("pregunta").value;
-    let respuesta1 = document.getElementById("respuesta1").value;
-    let respuesta2 = document.getElementById("respuesta2").value;
-    let respuesta3 = document.getElementById("respuesta3").value;
-    let respuesta4 = document.getElementById("respuesta4").value;
-
-    // Creamos el contenido a mostrar en el resultado
-    let resultadoHTML = `
-        <h3>Resumen del Formulario:</h3>
-        <p><strong>Categoria:</strong> ${categoria}</p>
-        <p><strong>Pregunta:</strong> ${pregunta}</p>
-        <p><strong>Respuesta 1:</strong> ${respuesta1}</p>
-        <p><strong>Respuesta 2:</strong> ${respuesta2}</p>
-        <p><strong>Respuesta 3:</strong> ${respuesta3}</p>
-        <p><strong>Respuesta 4:</strong> ${respuesta4}</p>
-    `;
-
-    // Mostramos el resultado en <div id="resultadoPregunta"</div>
-    document.getElementById("resultadoPregunta").innerHTML = resultadoHTML;
-}
 
 // Función para comprobar la categoria
 function comprobarCategoria() {
