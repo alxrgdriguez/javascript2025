@@ -63,7 +63,7 @@ function mostrarResultado() {
     document.getElementById("resultado").innerHTML = resultadoHTML;
 }
 
-let letrasYCaracteres = /^[a-zA-Z]+$/;;
+const letrasYCaracteres = /^[A-Z][a-zA-ZáéíóúÁÉÍÓÚ]+$/;
 
 // Función para comprobar el nombre
 function comprobarNombre() {
@@ -111,11 +111,11 @@ function comprobarApellidos() {
 // Función para comprobar la contraseña
 function comprobarContrasena() {
     let contrasena = document.getElementById("contrasena").value;
-    let validarContrasena = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[;,.\\-])[a-zA-Z\d;,.\\-]*\d+(\.\d+)?$/;
+    const patronContrasena = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[;,.\\-])[a-zA-Z\d;,.\\-]*\d+(\.\d+)?$/;
 
 
     // Verifica si la contraseña coincide con el patrón
-    if (validarContrasena.test(contrasena)) {
+    if (patronContrasena.test(contrasena)) {
         document.getElementById("contrasena").className = "";
         return true;
     } else {
@@ -151,7 +151,7 @@ function verificarContrasena() {
 function comprobarFechaNacimiento() {
     let fechaNacimiento = document.getElementById("fecha_nacimiento");
     let fecha = fechaNacimiento.value;
-    let fechaFormato = /^(\d{2})\/(\d{2})\/(\d{4})$/;
+    const fechaFormato = /^(\d{2})\/(\d{2})\/(\d{4})$/;
 
     if (fecha === "") {
         fechaNacimiento.focus();
