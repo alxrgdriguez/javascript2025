@@ -1,8 +1,8 @@
 // Obtener referencias a los elementos necesarios
-const addFila = document.getElementById('addFila');  // Botón para añadir una fila
-const addFilaBoton = document.getElementById('addFilaBoton');  // Botón "+" para añadir fila
-const deleteFilaBoton = document.getElementById('deleteFilaBoton');  // Botón "-" para eliminar fila
-const tableBody = document.querySelector('#miTabla tbody');  // Cuerpo de la tabla
+const addFila = document.getElementById('addFila');
+const addFilaBoton = document.getElementById('addFilaBoton');
+const deleteFilaBoton = document.getElementById('deleteFilaBoton');
+const tableBody = document.querySelector('#miTabla tbody');
 const celda1Input = document.getElementById('celda1');
 const celda2Input = document.getElementById('celda2');
 const celda3Input = document.getElementById('celda3');
