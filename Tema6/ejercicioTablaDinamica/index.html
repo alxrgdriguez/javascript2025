@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla Dinámica</title>
+</head>
+
+<style>
+    th,
+    td {
+        text-align: center;
+        padding: 5px;
+    }
+</style>
+
+<body>
+
+    <!--Construye una tabla dinámica de forma que puedas añadir filas y eliminarlas.
+    Celda 1, celda2 y celda 3 son los valores que le pasaremos a la nueva fila.-->
+
+    <h2>Tabla Dinamica</h2>
+    <table id="miTabla" border="1">
+        <thead>
+            <tr>
+                <th>Celda 1</th>
+                <th>Celda 2</th>
+                <th>Celda 3</th>
+                <th>
+                    <button id="addFilaBoton">+</button>
+                    <button id="deleteFilaBoton">-</button>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+    <br>
+    <label for="celda1">Celda 1:</label>
+    <input type="text" id="celda1">
+    <label for="celda2">Celda 2:</label>
+    <input type="text" id="celda2">
+    <label for="celda3">Celda 3:</label>
+    <input type="text" id="celda3">
+    <button id="addFila">Añadir fila</button>
+
+    <script src="tablaDinamica.js"></script>
+</body>
+
+</html>
