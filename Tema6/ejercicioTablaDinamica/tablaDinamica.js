@@ -67,3 +67,4 @@ function eliminarFila() {
 addFila.addEventListener('click', agregarFila);
 addFilaBoton.addEventListener('click', agregarFila);
 deleteFilaBoton.addEventListener('click', eliminarFila);
+s
