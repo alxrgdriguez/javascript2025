@@ -18,10 +18,12 @@ body {
 #titulo {
     text-align: center;
     margin-bottom: 20px;
+    font-size: 1.5em;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .calculadora {
-    width: 500px;
+    width: 600px;
     height: 400px;
     background: rgba(0, 0, 0, 0.7);
     border-radius: 10px;
@@ -39,7 +41,7 @@ body {
     text-align: right;
     background: rgba(255, 255, 255, 0.1);
     border-bottom: 2px solid #00cc99;
-    min-height: 60px;
+    min-height: 80px;
 }
 
 button {
@@ -79,4 +81,5 @@ footer {
     margin-top: 20px;
     font-size: 0.8em;
     color: #fff;
+    font-family: 'Courier New', Courier, monospace;
 }

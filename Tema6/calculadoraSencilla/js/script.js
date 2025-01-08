@@ -5,6 +5,10 @@ let operacion = '';
 
 // Funcion para agregar caracteres al resultado de la calculadora
 function agregarCaracter(caracter) {
+  // Si hay un error de sintaxis, limpiamos el resultado antes de continuar
+  if (operacion === 'Error de Sintaxis') {
+    operacion = '';  // Limpiar el mensaje de error
+  }
   operacion += caracter;
   resultado.textContent = operacion;
 }
@@ -20,12 +24,13 @@ function calcularResultado() {
   try {
     operacion = eval(operacion).toString();
   } catch (e) {
-    operacion = 'Error de sintaxis';
+    operacion = 'Error de Sintaxis';
   }
+
   resultado.textContent = operacion;
 }
 
-// Funcion para manejar todoslos botones de la calculadora
+// Funcion para manejar todos los botones de la calculadora
 function manejarBoton(valor) {
   agregarCaracter(valor);
 }
