@@ -1,5 +1,4 @@
 // Calculadora sencilla
-
 let resultado = document.getElementById('resultado');
 let operacion = '';
 
@@ -7,7 +6,7 @@ let operacion = '';
 function agregarCaracter(caracter) {
   // Si hay un error de sintaxis, limpiamos el resultado antes de continuar
   if (operacion === 'Error de Sintaxis') {
-    operacion = '';  // Limpiar el mensaje de error
+    operacion = '';  
   }
   operacion += caracter;
   resultado.textContent = operacion;
