@@ -90,7 +90,7 @@ function reanudarTemporizador() {
 function terminarJuego() {
     clearInterval(temporizador);
     temporizadorActivo = false;
-    alert('Juego terminado');
+    alert('Felicidades! Has completado el Puzzle deslizante.');
     document.getElementById('temporizador').innerText = 'Tiempo: 00:00:00';
     document.getElementById('empezar').style.display = 'inline-block';
     document.getElementById('pausar').style.display = 'none';

@@ -34,7 +34,7 @@ function manejarBoton(valor) {
   agregarCaracter(valor);
 }
 
-function inicializar() {
+window.onload = function() {
   document.getElementById('siete').onclick = function() { manejarBoton('7'); };
   document.getElementById('ocho').onclick = function() { manejarBoton('8'); };
   document.getElementById('nueve').onclick = function() { manejarBoton('9'); };
@@ -51,7 +51,5 @@ function inicializar() {
   document.getElementById('suma').onclick = function() { manejarBoton('+'); };
   document.getElementById('limpiar').onclick = limpiarResultado;
   document.getElementById('igual').onclick = calcularResultado;
+};
 
-}
-
-inicializar();

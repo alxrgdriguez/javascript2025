@@ -4,88 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Proyecto puzzle deslizante</title>
-	<style type="text/css">
-		div#tablero,
-		div#solucion {
-			border: 5px solid black;
-			padding: 0px;
-			margin-left: 10%;
-			background-color: beige;
-			opacity: 0.8;
-			position: relative;
-			width: 400px;
-			float: left;
-		}
-
-		div#solucion {
-			background: url('solucion.png');
-			min-height: 400px;
-		}
-
-		.clearfix {
-			overflow: hidden;
-		}
-
-		div.celda {
-			border: 0px solid #000;
-			width: 100px;
-			height: 100px;
-			float: left;
-			color: red;
-			text-align: center;
-			font-size: 1.5em;
-			margin: 0;
-			padding: 0;
-		}
-
-		h1 {
-			margin: 10px auto;
-			text-align: center;
-		}
-
-		#contenedor-botones {
-			text-align: center;
-			margin-top: 20px;
-		}
-
-		#temporizador {
-			text-align: center;
-			margin-top: 20px;
-			font-size: 1.5em;
-		}
-
-		#empezar {
-			background-color: green;
-			color: white;
-			border: none;
-			padding: 10px;
-			font-size: 1.5em;
-			cursor: pointer;
-			border-radius: 8px;
-		}
-
-		#empezar:hover {
-			background-color: darkgreen;
-		}
-
-		#pausar,
-		#reanudar,
-		#terminar {
-			background-color: red;
-			color: white;
-			border: none;
-			padding: 10px;
-			font-size: 1.5em;
-			cursor: pointer;
-			border-radius: 8px;
-		}
-
-		#pausar:hover,
-		#reanudar:hover,
-		#terminar:hover {
-			background-color: darkred;
-		}
-	</style>
+	<link rel="stylesheet" href="./css/style.css">
 	<script src="./js/script.js" type="text/javascript"></script>
 </head>
 
@@ -101,9 +20,9 @@
 	<!--------------------------------------------------------------------->
 	<div id="contenedor-botones">
 		<button id="empezar">Empezar Juego</button>
-		<button id="pausar" style="display: none;">Pausar</button>
-		<button id="reanudar" style="display: none;">Reanudar</button>
-		<button id="terminar" style="display: none;">Terminar</button>
+		<button id="pausar">Pausar</button>
+		<button id="reanudar">Reanudar</button>
+		<button id="terminar">Terminar</button>
 	</div>
 
 	<div id="temporizador">

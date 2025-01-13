@@ -1,0 +1,99 @@
+div#tablero,
+div#solucion {
+    border: 5px solid black;
+    padding: 0px;
+    margin-left: 10%;
+    background-color: beige;
+    opacity: 0.8;
+    position: relative;
+    width: 400px;
+    float: left;
+}
+
+div#solucion {
+    background: url('../img/solucion.png');
+    min-height: 400px;
+}
+
+.clearfix {
+    overflow: hidden;
+}
+
+div.celda {
+    border: 0px solid #000;
+    width: 100px;
+    height: 100px;
+    float: left;
+    color: red;
+    text-align: center;
+    font-size: 1.5em;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin: 10px auto;
+    text-align: center;
+}
+
+#contenedor-botones {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#temporizador {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.5em;
+}
+
+#empezar {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 1.5em;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+#empezar:hover {
+    background-color: darkgreen;
+}
+
+#pausar,
+#reanudar,
+#terminar {
+    border: none;
+    padding: 10px;
+    display: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+#pausar {
+    background-color: orange;
+}
+
+#pausar:hover {
+    background-color: rgb(212, 141, 8);
+}
+
+#reanudar {
+    background-color: rgb(126, 209, 0);
+    color: white;
+}
+
+#reanudar:hover {
+    background-color: rgb(75, 121, 7);
+    color: white;
+}
+
+#terminar {
+    background-color: red;
+}
+
+#terminar:hover {
+    background-color: rgb(207, 10, 10);
+}
