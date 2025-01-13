@@ -4,7 +4,7 @@ let temporizadorActivo = false;
 let temporizadorPausado = false;
 
 // Asignación de eventos al cargar la página
-window.onload = function () {
+function asignarEventos() {
     // Obtención de los elementos
     const botonEmpezar = document.getElementById('empezar');
     const botonPausar = document.getElementById('pausar');
@@ -97,3 +97,44 @@ function terminarJuego() {
     document.getElementById('reanudar').style.display = 'none';
     document.getElementById('terminar').style.display = 'none';
 }
+
+
+let filas = 4;  
+let columnas = 4;  
+let movimientos = 0;
+let tablero = [];
+let vacio = { fila: 4, columna: 4 };  // Posición de la casilla vacía (siempre en la ultima)
+
+// Array con el orden de las imágenes (1 a 16)
+let imgOrden = [
+    "1", "2", "3", "4", 
+    "5", "6", "7", "8", 
+    "9", "10", "11", "12", 
+    "13", "14", "15", "blanco"
+];
+
+function crearPuzzle() {
+
+    // Crear las piezas del puzzle
+    for (let i = 0; i < filas; i++) {
+        tablero[i] = [];
+        for (let j = 0; j < columnas; j++) {
+            let pieza = document.createElement("img");
+            pieza.id = `${i}${j}`;
+            pieza.src = `./img/${imgOrden.shift()}.gif`;
+            pieza.classList.add("pieza");
+
+            // Establecer el evento de clic para mover las piezas
+            pieza.addEventListener("click", function() {
+                moverPieza(i, j);
+            });
+
+            document.getElementById("tablero").appendChild(pieza);
+            tablero[i][j] = pieza;
+        }
+    }
+};
+
+
+crearPuzzle();
+asignarEventos();
