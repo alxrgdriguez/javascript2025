@@ -1,99 +1,109 @@
-div#tablero,
-div#solucion {
-    border: 5px solid black;
-    padding: 0px;
-    margin-left: 10%;
-    background-color: beige;
-    opacity: 0.8;
-    position: relative;
-    width: 400px;
-    float: left;
-}
-
-div#solucion {
-    background: url('../img/solucion.png');
-    min-height: 400px;
-}
-
-.clearfix {
-    overflow: hidden;
-}
-
-div.celda {
-    border: 0px solid #000;
-    width: 100px;
-    height: 100px;
-    float: left;
-    color: red;
-    text-align: center;
-    font-size: 1.5em;
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+#contenedor {
+    text-align: center;
+    max-width: 1200px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
-    margin: 10px auto;
-    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+/* Tablero del puzzle */
+#tablero {
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(4, 100px);
+    gap: 10px;
+    justify-content: center;
+}
+
+.pieza {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.pieza:hover {
+    transform: scale(1.1);
+}
+
+/* Solución */
+#solucion {
+    background: url('../img/solucion.png') no-repeat center;
+    background-size: cover;
+    min-height: 400px;
+    margin-top: 20px;
+    border-radius: 10px;
 }
 
 #contenedor-botones {
-    text-align: center;
     margin-top: 20px;
 }
 
-#temporizador {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 1.5em;
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
+button:hover {
+    background-color: #ddd;
+}
+
+/* Botones específicos */
 #empezar {
-    background-color: green;
+    background-color: #28a745;
     color: white;
     border: none;
-    padding: 10px;
-    font-size: 1.5em;
-    cursor: pointer;
-    border-radius: 8px;
-}
-
-#empezar:hover {
-    background-color: darkgreen;
-}
-
-#pausar,
-#reanudar,
-#terminar {
-    border: none;
-    padding: 10px;
-    display: none;
-    font-size: 1.2em;
-    cursor: pointer;
-    border-radius: 8px;
 }
 
 #pausar {
-    background-color: orange;
-}
-
-#pausar:hover {
-    background-color: rgb(212, 141, 8);
+    background-color: #f39c12;
+    color: white;
+    display: none;
 }
 
 #reanudar {
-    background-color: rgb(126, 209, 0);
-    color: black;
-}
-
-#reanudar:hover {
-    background-color: rgb(75, 121, 7);
-    color: black;
+    background-color: #2ecc71;
+    color: white;
+    display: none;
 }
 
 #terminar {
-    background-color: red;
+    background-color: #e74c3c;
+    color: white;
+    display: none;
 }
 
-#terminar:hover {
-    background-color: rgb(207, 10, 10);
+#temporizador {
+    font-size: 1.5em;
+    margin-top: 20px;
+    font-weight: bold;
+    color: #333;
 }
